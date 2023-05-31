@@ -1,10 +1,12 @@
 import React from 'react'
 import {Line} from 'react-chartjs-2'
 import {Row,Col,Typography} from 'antd'
-import Chart from 'chart.js/auto';
+import { Chart, LinearScale, CategoryScale, PointElement, LineController, LineElement } from 'chart.js';
 import 'moment';
 import 'chartjs-adapter-moment';
 
+// Register the CategoryScale
+Chart.register(CategoryScale, LinearScale, PointElement,LineController, LineElement,);
 
 const {Title} = Typography;
 
